@@ -1,0 +1,170 @@
+* {
+    border: none;
+    border-radius: 8;
+    font-family: "JetBrainsMono Nerd Font Propo", Roboto, Helvetica, Arial, sans-serif;
+
+    min-height: 0;
+    margin: 0 0px;
+    padding: 0 0px;
+}
+
+window#waybar {
+    background: rgba(75, 82, 114, 0.5);
+    border-radius: 6px;
+    color: white;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces {
+    background-color: #13131d;
+    padding: 0 6px;
+    margin: 5 0px;
+    border-radius: 6px;
+    transition: all 250ms ease-in-out;
+}
+
+#workspaces button {
+    transition: all 200ms ease-out;
+    padding: 0px 3px;
+    margin: 5px 3px;
+    background: #1d1d2c;
+    color: transparent;
+    border: 2px solid transparent;
+    border-radius: 10;
+}
+
+#workspaces button.active {
+    transition: all 200ms ease-in-out;
+    background-color: #b4befe;
+    color: #1d1d2c;
+    font-weight: bolder;
+    border-radius: 7;
+    border: 0px;
+    min-width: 45px;
+}
+
+#workspaces button.focused {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#clock {
+    background-color: #13131d;
+    color: #ff7878;
+    border-radius: 6px;
+    padding: 0 8px;
+    margin: 5 6px;
+    font-weight: bolder;
+}
+
+#battery {
+    background-color: #13131d;
+    color: #ffffff;
+    padding: 0 8px;
+    margin: 5 6px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+
+#battery.charging {
+    color: #90e987;
+    background-color: #13131d;
+    font-weight: bolder;
+}
+
+#battery.warning:not(.charging) {
+    background: #13131d;
+    color: #eb7697;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    font-weight: bolder;
+}
+
+#pulseaudio {
+    background-color: #13131d;
+    color: #6ca4ff;
+    padding: 0 8px;
+    margin: 5 6px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+
+#network {
+    background-color: #13131d;
+    color: #ff97e3;
+    padding: 0 8px;
+    margin: 5 6px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+
+#mpris {
+    color: #fff3ac;
+    background-color: #13131d;
+    padding: 0 8px;
+    margin: 5 6px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+
+#mpris.paused {
+    color: #a19b7a;
+    font-style: italic;
+}
+
+#custom-updates {
+    color: #F38BA8;
+    background-color: #13131d;
+    padding: 0 10px;
+    margin: 5 6px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+
+#custom-updates.empty {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: transparent;
+}
+
+#idle_inhibitor.deactivated {
+    background-color: #13131d;
+    color: #7e643c;
+    padding: 0 8px;
+    margin: 5 6px;
+    border-radius: 6px;
+}
+
+#idle_inhibitor.activated {
+    background-color: #13131d;
+    color: #ffb778;
+    padding: 0 8px;
+    margin: 5 6px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+
+#window {
+    background-color: #13131d;
+    color: #84ffea;
+    border-radius: 6px;
+    margin: 5 6px;
+    padding: 0 10px;
+    font-weight: bolder;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
