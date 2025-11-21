@@ -1,0 +1,89 @@
+* {
+    background-image: none;
+    box-shadow: none;
+    font-size: large;
+}
+
+window {
+    background-color: transparent;
+}
+
+button {
+    background-color: rgba(18, 18, 28, 0.1);
+    color: #cdd6f4; 
+    outline-style: none;
+    border: none;
+    border-width: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+    margin: 7px;
+    border-radius: 3px;
+    box-shadow: none;
+    text-shadow: none;
+    animation: gradient_f 20s ease-in infinite;
+}
+
+button:focus {
+    background-color: rgba(19, 19, 29, 0.419);
+    border-radius: 6px;
+    margin : 0 0px;
+    background-size: 30%;
+}
+
+button:hover#logout {
+    border-radius: 6px;
+    margin : 0 0px;
+}
+
+button:hover#suspend {
+    border-radius: 6px;
+    margin : 0 0px;
+}
+
+button:hover#shutdown {
+    border-radius: 6px;
+    margin : 0 0px;
+}
+
+button:hover#hibernate {
+    border-radius: 6px;
+    margin : 0 0px;
+}
+
+button:hover#reboot {
+    border-radius: 6px;
+    margin : 0 0px;
+}
+
+button:hover {
+    background-color: rgba(19, 19, 29, 0.419);
+    background-size: 40%;
+    border-radius: 8px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+}
+
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#hibernate {
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}
