@@ -1,6 +1,23 @@
 # My-Hyprland-configs-based-on-catppuccin-mocha
 
-**Screenshots**
+<div align="center">
+  <table><tr>Screenshots</tr>
+    <tr>
+      <td>
+        <img src="screenshots/image.png"/>
+      </td>
+      <td>
+        <img src="screenshots/image2.png"/>
+      </td>
+      <td>
+        <img src="screenshots/image3.png"/>
+      </td>
+      <td>
+        <img src="screenshots/image3.png"/>
+      </td>
+    </tr>
+  </table>
+</div>
 
 *List of stuff to download I guess:*
 1. zsh
