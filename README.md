@@ -1,5 +1,7 @@
 # My-Hyprland-configs-based-on-catppuccin-mocha
 
+**Screenshots**
+
 *List of stuff to download I guess:*
 1. zsh
 2. .oh-my-zsh (p10k)
