@@ -6,22 +6,25 @@
     // Waybar height (to be removed for auto height)
     // "width": 1280,
     "padding": 6,
-    "margin-top": 4,
-    "margin-left": 6,
-    "margin-right": 6,
+    "margin-bottom": -2,
     "layer": "top",
     "modules-left": [
-        "clock", "idle_inhibitor", "gamemode", "hyprland/window"
+        "clock",
+        "mpris"
     ],
     "modules-center": [
-        "hyprland/workspaces", "custom/dunst"
+        "idle_inhibitor",
+        "hyprland/workspaces",
+        "custom/notification"
     ],
     "modules-right": [
-        "mpris",
         "custom/updates",
         "pulseaudio",
+        "backlight",
         "network",
-        "battery"
+        "battery",
+        "custom/theme",
+        "custom/calc"
     ],
 
     "battery": {
@@ -53,11 +56,17 @@
             "phone-muted": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "scroll-step": 1,
         "on-click": "pavucontrol",
-        "ignored-sinks": ["Easy Effects Sink"]
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ]
     },
 
     "network": {
@@ -76,7 +85,7 @@
 
     "mpris": {
         "format": "{player_icon} {title}",
-        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "format-paused": "{status_icon} <i>{title}</i>",
         "player-icons": {
             "default": "",
             "mpv": ""
@@ -85,38 +94,74 @@
             "paused": ""
         },
         "max-length": 30,
-        "ignored-players": ["firefox", "brave", "chromium", "Picture in picture"] // Use this to ignore browser media
-    },
-
-    "gamemode": {
-        "format": "{glyph}",
-        "format-alt": "{glyph} {count}",
-        "glyph": "",
-        "hide-not-running": true,
-        "use-icon": true,
-        "icon-name": "input-gaming-symbolic",
-        "icon-spacing": 4,
-        "icon-size": 20,
-        "tooltip": true,
-        "tooltip-format": "Games running: {count}"
+        "ignored-players": [
+            "firefox",
+            "brave",
+            "chromium",
+            "Picture in picture"
+        ] // Use this to ignore browser media
     },
 
     "custom/updates": {
         "format": "󰮯 {}",
         "return-type": "json",
-        "exec": "~/.config/waybar/scripts/check_updates.sh",
+        "exec": "~/.config/waybar/scripts/updates.sh",
         "restart-interval": 60,
         "signal": 8,
         "on-click": "kitty --title 'Updates' sh -c 'yay; echo Done; pkill -SIGRTMIN+8 waybar; sleep 2'",
-        "tooltip": true
+        "tooltip": false
     },
 
     "idle_inhibitor": {
-        "format": "{icon} Caffeine Mode",
+        "format": "{icon}",
         "format-icons": {
             "activated": "󰅶",
             "deactivated": "󰛊"
         }
+    },
+
+    "custom/notification": {
+        "tooltip": true,
+        "format": "{} {icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "",
+            "dnd-notification": "",
+            "dnd-none": "󰂛",
+            "inhibited-notification": "",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": " ",
+            "dnd-inhibited-none": " "
+        },
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.1; swaync-client -t -sw",
+        "on-click-right": "swaync-client -d",
+        "return-type": "json",
+        "exec-if": "which swaync-client"
+    },
+
+    "custom/theme": {
+        "format": "",
+        "on-click": "nwg-look",
+        "tooltip": false
+    },
+
+    "custom/calc": {
+        "format": "",
+        "on-click": "qalculate-gtk",
+        "tooltip": false
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "󰪞",
+            "󰪟",
+            "󰪡",
+            "󰪣",
+            "󰪥"
+        ]
     },
 
     "hyprland/workspaces": {
@@ -130,47 +175,5 @@
         "format": "{}",
         "separate-outputs": true,
         "max-length": 45
-    },
-    "custom/dunst": {
-        "format": "{icon} {0}",
-        "rotate": 0,
-        "format-icons": {
-            "notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-notification": "<span foreground='red'><sup></sup></span>",
-            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "inhibited-none": "",
-            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-inhibited-none": "",
-            "dnd-none": "",
-            "email-notification": "<span foreground='white'><sup></sup></span>",
-            "chat-notification": "󱋊<span foreground='white'><sup></sup></span>",
-            "warning-notification": "󱨪<span foreground='yellow'><sup></sup></span>",
-            "error-notification": "󱨪<span foreground='red'><sup></sup></span>",
-            "network-notification": "󱂇<span foreground='white'><sup></sup></span>",
-            "battery-notification": "󰁺<span foreground='white'><sup></sup></span>",
-            "update-notification": "󰚰<span foreground='white'><sup></sup></span>",
-            "music-notification": "󰝚<span foreground='white'><sup></sup></span>",
-            "volume-notification": "󰕿<span foreground='white'><sup></sup></span>",
-            "dnd": "",
-            "none": ""
-        },
-        "return-type": "json",
-        // "exec-if": "which dunstctl",
-        "exec-if": "dunstctl  is-paused &> /dev/null", // This is to check if dunst is running
-        "exec": "hyde-shell notifications",
-        "on-scroll-down": "sleep 0.1 && dunstctl history-pop",
-        "on-click": "dunstctl set-paused toggle",
-        "on-click-middle": "dunstctl history-clear",
-        "interval": 1,
-        "tooltip": true,
-        "escape": true,
-        "menu": "on-click-right",
-        "menu-file": "${HYDE_WAYBAR_MENU_DIR:-$XDG_DATA_HOME/waybar/menus}/dunst.xml",
-        "menu-actions": {
-            "show": "dunstctl history-pop",
-            "toggle-dnd": "dunstctl set-paused toggle",
-            "clear": "dunstctl history-clear",
-            "close-all": "dunstctl close-all"
-        }
     }
 }

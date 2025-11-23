@@ -1,4 +1,3 @@
-#!/bin/bash
 # Count official updates
 off=$(checkupdates 2> /dev/null | wc -l)
 # Count AUR updates (for yay, otherwise remove this line)

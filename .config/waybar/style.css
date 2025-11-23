@@ -1,16 +1,16 @@
 * {
     border: none;
-    border-radius: 8;
+    border-radius: 0;
     font-family: "JetBrainsMono Nerd Font Propo", Roboto, Helvetica, Arial, sans-serif;
 
     min-height: 0;
     margin: 0 0px;
-    padding: 0 0px;
+    padding: 0 2px;
 }
 
 window#waybar {
-    background: rgba(75, 82, 114, 0.5);
-    border-radius: 6px;
+    background: #13131d;
+    border-radius: 0px;
     color: white;
 }
 
@@ -25,7 +25,7 @@ tooltip label {
 #workspaces {
     background-color: #13131d;
     padding: 0 6px;
-    margin: 5 0px;
+    margin: 2 2px;
     border-radius: 6px;
     transition: all 250ms ease-in-out;
 }
@@ -57,10 +57,10 @@ tooltip label {
 
 #clock {
     background-color: #13131d;
-    color: #ff7878;
+    color: #F38BA8;
     border-radius: 6px;
     padding: 0 8px;
-    margin: 5 6px;
+    margin: 0 2px;
     font-weight: bolder;
 }
 
@@ -68,7 +68,7 @@ tooltip label {
     background-color: #13131d;
     color: #ffffff;
     padding: 0 8px;
-    margin: 5 6px;
+    margin: 0 2px;
     border-radius: 6px;
     font-weight: bolder;
 }
@@ -94,7 +94,16 @@ tooltip label {
     background-color: #13131d;
     color: #6ca4ff;
     padding: 0 8px;
-    margin: 5 6px;
+    margin: 0 2px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+
+#backlight {
+    background-color: #13131d;
+    color: #eadfc2;
+    padding: 0 8px;
+    margin: 0 2px;
     border-radius: 6px;
     font-weight: bolder;
 }
@@ -103,7 +112,7 @@ tooltip label {
     background-color: #13131d;
     color: #ff97e3;
     padding: 0 8px;
-    margin: 5 6px;
+    margin: 0 2px;
     border-radius: 6px;
     font-weight: bolder;
 }
@@ -112,7 +121,7 @@ tooltip label {
     color: #fff3ac;
     background-color: #13131d;
     padding: 0 8px;
-    margin: 5 6px;
+    margin: 0 2px;
     border-radius: 6px;
     font-weight: bolder;
 }
@@ -120,13 +129,14 @@ tooltip label {
 #mpris.paused {
     color: #a19b7a;
     font-style: italic;
+    font-weight: bolder;
 }
 
 #custom-updates {
     color: #F38BA8;
     background-color: #13131d;
     padding: 0 10px;
-    margin: 5 6px;
+    margin: 0 2px;
     border-radius: 6px;
     font-weight: bolder;
 }
@@ -139,32 +149,69 @@ tooltip label {
     color: transparent;
 }
 
+#custom-theme {
+    color: #7dffb3;
+    padding: 0 10px;
+    margin: 0 2px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+
+#custom-calc {
+    color: #7daaff;
+    padding: 0 8px;
+    margin: 0 2px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+
 #idle_inhibitor.deactivated {
     background-color: #13131d;
     color: #7e643c;
     padding: 0 8px;
-    margin: 5 6px;
+    margin: 0 2px;
     border-radius: 6px;
+    font-weight: bolder;
 }
 
 #idle_inhibitor.activated {
     background-color: #13131d;
     color: #ffb778;
     padding: 0 8px;
-    margin: 5 6px;
+    margin: 0 2px;
     border-radius: 6px;
     font-weight: bolder;
+}
+
+#custom-notification {
+    background-color: #26263a;
+    color: #B4Befe;
+    padding: 0 8px;
+    margin: 7 2px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+#custom-notification.dnd {
+    color: #7E643C;
+}
+
+#custom-notification.notification {
+    color: #F38BA8;
 }
 
 #window {
     background-color: #13131d;
     color: #84ffea;
     border-radius: 6px;
-    margin: 5 6px;
     padding: 0 10px;
+    margin: 0 2px;
     font-weight: bolder;
 }
 
 window#waybar.empty #window {
     background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
