@@ -9,15 +9,23 @@
       <td>
         <img src="screenshots/image2.png"/>
       </td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <table>
+    <tr>
       <td>
         <img src="screenshots/image3.png"/>
       </td>
       <td>
-        <img src="screenshots/image3.png"/>
+        <img src="screenshots/image4.png"/>
       </td>
     </tr>
   </table>
 </div>
+
 
 *List of stuff to download I guess:*
 1. zsh
