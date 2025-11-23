@@ -1,25 +1,30 @@
 # My-Hyprland-configs-based-on-catppuccin-mocha
 
 *List of stuff to download I guess:*
-1. .oh-my-zsh (p10k)
-2. yay
-3. fastfetch
-4. Numix icon (Use Rain-Dark)
-5. rofi-wayland
-6. nwg-look
-7. kitty
-8. waybar
-9. dunst
-10. hypridle
-11. hyprpaper
-12. waypaper
-13. network-manager-applet
-14. power-profiles-daemon
-15. Dolphin
-16. pavucontrol
-17. gamemode
-18. cliphist
-19. wlogout
+1. zsh
+2. .oh-my-zsh (p10k)
+3. yay
+4. fastfetch
+5. Numix icon (Use Rain-Dark) or Tela Purple Dark
+6. rofi-wayland
+7. nwg-look
+8. kitty
+9. grim
+10. slurp
+11. hyprpicker
+12. waybar
+13. swaync
+14. hypridle
+15. hyprpaper
+16. waypaper
+17. network-manager-applet
+18. power-profiles-daemon
+19. Dolphin
+20. pavucontrol
+21. gamemode
+22. cliphist
+23. wlogout
+24. qalucator-gtk
 
 *Non-essential stuff (kinda):*
 1. VSCodium
@@ -33,13 +38,11 @@
 9. go
 10. git
 11. flatpak
-12. grim
-13. slurp
-14. VLC
-15. Vesktop
-16. Spotify
-17. Steam
-18. Prism launcher
+12. VLC
+13. Vesktop
+14. Spotify
+15. Steam
+16. Prism launcher
 
 *Additional fonts:*
 1. JetbrainsMono Nerd Font
@@ -48,4 +51,4 @@
 4. AlfaSlabOne-Regular
 5. SF Pro Display
 
-**There are some shit I might have forgotten to mentioned but I'll probably won't add it since I don't touch github that much.**
+**There are some stuff I might have forgotten to mentioned but I'll probably won't add it since I don't touch github that much.**
